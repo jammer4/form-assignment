@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+#form-div {
+  width: 600px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#form-div label {
+  font-weight: bold;
+  color: darkslategrey;
+  float: left;
+}
+
+#form-div input[type="text"] {
+  margin-bottom: 10px;
+  width: 60%;
+  height: 30px;
+  border: solid rgb(194, 193, 193) 1.5px;
+  border-radius: 5px;
+}
+
+#form-div input[type="checkbox"] {
+  float: left;
+}
+
+#hypo-label {
+  margin-left: 5%;
+}
+
+#ok {
+  background-color: rgb(51, 99, 161);
+  color: white;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 20%;
+  height: 35px;
+  border: solid rgb(51, 99, 161) 1.5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#reset {
+  background-color: white;
+  color: darkslategrey;
+  width: 20%;
+  height: 35px;
+  border: solid rgb(194, 193, 193) 1.5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
