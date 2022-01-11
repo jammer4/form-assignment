@@ -25,12 +25,17 @@ body {
   border-radius: 5px;
 }
 
+#form-div input[type="text"]:disabled {
+  background-color: rgb(228, 225, 225);
+}
+
 #form-div input[type="checkbox"] {
   float: left;
 }
 
 #hypo-label {
   margin-left: 5%;
+  width: 30px;
 }
 
 #ok {
