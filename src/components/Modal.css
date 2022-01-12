@@ -1,0 +1,33 @@
+#background {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(160, 158, 158, 0.863);
+}
+
+#table-div {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20%;
+    text-align: center;
+}
+  
+th {
+    border-bottom: solid;
+}
+
+#back-button {
+    background-color: rgb(51, 99, 161);
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 20%;
+    height: 35px;
+    border: solid rgb(51, 99, 161) 1.5px;
+    border-radius: 5px;
+    font-weight: bold;
+}

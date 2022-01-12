@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Form() {
+function Form(props) {
     const [disable, setDisable] = useState(true);
     
     function checkClick() {
@@ -29,7 +29,10 @@ function Form() {
             alert('Only whole numbers greater than 1 are allowed');
             return;
         }
-
+        if (!Number.isInteger(parseFloat(size.value))) {
+            alert('Only whole numbers greater than 1 are allowed');
+            return;
+        }
         const mean = document.getElementById('sample-mean');
         if (mean.value === '') {
             alert('Please fill in all active fields');
@@ -49,7 +52,7 @@ function Form() {
             alert('Only numbers are allowed for this field');
             return;
         }
-        if (parseInt(dev.value) <= 0) {
+        if (parseFloat(dev.value) <= 0) {
             alert('Only numbers greater than 0 are allowed');
             return;
         }
@@ -65,6 +68,19 @@ function Form() {
                 return;
             }
         }
+
+        props.setSize(size.value);
+        props.setMean(mean.value);
+        props.setDev(dev.value);
+        props.setHypo(hypo.value);
+        props.setOpenModal(true);
+    }
+
+    function formReset() {
+        setDisable(true);
+
+        const label = document.getElementById('hypo-label');
+        label.style.color = 'lightgray';
     }
 
     return (
@@ -81,7 +97,7 @@ function Form() {
                 <label htmlFor="hypo-mean" id="hypo-label" style={{color: 'lightgray'}}>Hypothesized mean: </label>
                 <input type="text" id="hypo-mean" disabled={disable}></input><br/>
                 <button id="ok" type="button" onClick={validate}>OK</button>
-                <button id ="reset" type="reset">Reset</button>
+                <button id ="reset" type="reset" onClick={formReset}>Reset</button>
             </form>
         </div>
     );
