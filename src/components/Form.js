@@ -5,6 +5,7 @@ function Form(props) {
     
     function checkClick() {
         setDisable(!disable);
+        document.getElementById('hypo-mean').value = '';
 
         const label = document.getElementById('hypo-label');
         if (disable) {
