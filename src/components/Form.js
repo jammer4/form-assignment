@@ -70,7 +70,7 @@ function Form(props) {
             }
         }
 
-        props.setSize(size.value);
+        props.setSize(parseInt(size.value));
         props.setMean(mean.value);
         props.setDev(dev.value);
         props.setHypo(hypo.value);
