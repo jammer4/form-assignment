@@ -3,6 +3,7 @@ import { useState } from 'react';
 function Form(props) {
     const [disable, setDisable] = useState(true);
     
+    //Disables Hypothesized mean field and label
     function checkClick() {
         setDisable(!disable);
         document.getElementById('hypo-mean').value = '';
@@ -16,6 +17,7 @@ function Form(props) {
         }
     }
 
+    //Validates input values and sets table values if validation is successful
     function validate() {
         const size = document.getElementById('sample-size');
         if (size.value === '') {

@@ -1,5 +1,6 @@
 import './Modal.css';
 
+//Modal overlay to display the table and disallow interactivity with the form
 function Modal(props) {
     return (
         <div id="background">

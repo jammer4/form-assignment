@@ -17,7 +17,7 @@ function App() {
             setMean={setMean}
             setDev={setDev}
             setHypo={setHypo}/>
-      {openModal && <Modal setOpenModal={setOpenModal}
+      {openModal && <Modal setOpenModal={setOpenModal} /*Opens modal component only if openModal is true (when OK button is clicked)*/
                            size ={size}
                            mean={mean}
                            dev={dev}
